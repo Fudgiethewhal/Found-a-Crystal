@@ -24,7 +24,7 @@ class Program
     {
         //Creates a dictionary where each key is a location(string) and the 
         //value is a list of Crystal objects found at the location.
-        Dictionary<string>, List<Crystal> crystalsCollection = new Dictionary<string, List<Crystal>>();
+        Dictionary<string, List<Crystal>> crystalsCollection = new Dictionary<string, List<Crystal>>();
         CrystalManager crystalManager = new CrystalManager();
 
         while (true)

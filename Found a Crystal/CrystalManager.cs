@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Found_a_Crystal;
 
-public class CrystalManager
+public class CrystalManager 
 {
     public List<string> CrystalTypes = new List<string>
     {
@@ -35,4 +35,5 @@ public class CrystalManager
         collection[location].Add(crystal);
         Console.WriteLine($"Added {crystal} to {location}.");
     }
+    
 }
