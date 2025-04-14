@@ -119,10 +119,10 @@ class Program
 
         foreach (var location in collection)
         {
-            Console.WriteLine($"Location: {location.Key}");
+            Console.WriteLine($"\nLocation: {location.Key}");
             foreach (var crystal in location.Value)
             {
-                Console.WriteLine($"  - Type: {crystal.Type}, Description: {crystal.Description}");
+                Console.WriteLine($"  - Type: {crystal.Classification}, Description: {crystal.Description}, Color: {crystal.Color}");
             }
         }
     }
