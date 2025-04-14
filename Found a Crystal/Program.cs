@@ -24,7 +24,7 @@ class Program
     {
         //Creates a dictionary where each key is a location(string) and the 
         //value is a list of Crystal objects found at the location.
-        Dictionary<string, List<Crystal>> crystalsCollection = new Dictionary<string, List<Crystal>>();
+        Dictionary<string, List<Crystals>> crystalsCollection = new Dictionary<string, List<Crystals>>();
         CrystalManager crystalManager = new CrystalManager();
 
         while (true)
@@ -47,7 +47,7 @@ class Program
                     ViewCollection(crystalsCollection);
                     break;
                 case "3":
-                    Console.WriteLine("Exit");
+                    Console.WriteLine("Goodbye!");
                     return;
                 default:
                     Console.WriteLine("Enter your choice: ");
@@ -57,7 +57,7 @@ class Program
     }
     
     //A method for adding crystals to the collection.
-    static void AddCrystals(Dictionary<string, List<Crystal>> collection)
+    static void AddCrystals(Dictionary<string, List<Crystals>> collection)
     {
         //Prompts the user for a location where the crystal was found.
         Console.WriteLine("Enter Location:");
@@ -82,25 +82,31 @@ class Program
         string type = CrystalTypes[choice - 1];
         
         //the description is for the user to add their crystal info.
+        Console.WriteLine("Enter Classification: ");
+        string classification = Console.ReadLine();
+        
         Console.WriteLine("Enter description: ");
         string description = Console.ReadLine();
+
+        Console.WriteLine("Enter crystal color: ");
+        string color = Console.ReadLine();
         
-        //creates a new crystal object using type and description.
-        Crystal crystal = new Crystal(type, description);
+        //creates a new crystal object using classification and description.
+        Crystals crystal = new Crystals(classification, description, color);
 
         //Checks if the location already exists in the dictionary.
         if (!collection.ContainsKey(location))
         {
             //.Add will add a new location if doesn't exist.
-            collection.Add(location, new List<Crystal>());
+            collection.Add(location, new List<Crystals>());
         }
         //Adds the new crystal to the list at the specified location
         collection[location].Add(crystal);
         //This will show that the crystal has been added.
-        Console.WriteLine($"Added crystal to collection with a description of {description}, which is a type of {type}.");
+        Console.WriteLine($"Added crystal to collection with a description of {description}.");
     }
 
-    static void ViewCollection(Dictionary<string, List<Crystal>> collection)
+    static void ViewCollection(Dictionary<string, List<Crystals>> collection)
     {
         //this is where the crystals are stored
         Console.WriteLine("\nCrystal Collection:");
@@ -113,9 +119,11 @@ class Program
 
         foreach (var location in collection)
         {
-            //Loops through the list of crystals at each location
-            // and displays them
             Console.WriteLine($"Location: {location.Key}");
+            foreach (var crystal in location.Value)
+            {
+                Console.WriteLine($"  - Type: {crystal.Type}, Description: {crystal.Description}");
+            }
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿namespace Found_a_Crystal;
 
-public class Crystals : ICrystal
+public class Crystals(string? classification, string? description, string? color) : ICrystal
 {
-    public string Type { get; set; } 
+    public string Classification { get; set; } 
     public string Description { get; set; }
     public string Color { get; set; }
-    public int Quantity { get; set; }
+    
 }
