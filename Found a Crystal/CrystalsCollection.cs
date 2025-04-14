@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Found_a_Crystal;
 
-public class crystalsCollection 
+public class CrystalsCollection 
 {
     //returns a crystal object created based on user input
     public static Crystals CreateFromUserInput()
     {
-        Console.WriteLine("Choose a type: ");
+        Console.WriteLine("Choose a classification: ");
         //loops through each type in the CrystalTypes list
-        for (int i = 0; i < CrystalTypes.Count; i++)
+        for (int i = 0; i < CrystalManager.Count; i++)
         {
             //Displays each crystal type as a numbered option starting from 1.
-            Console.WriteLine($"{i + 1}. {CrystalTypes[i]}");
+            Console.WriteLine($"{i + 1}. {CrystalManager[i]}");
         }
 
         //User will inout their response
@@ -30,8 +30,8 @@ public class crystalsCollection
         if (int.TryParse(input, out int choice) && choice >= 1 && choice <= CrystalTypes.Count)
         {
             //gets the selected crystal type from the list
-            string selectedType = CrystalTypes[choice - 1];
-            Console.WriteLine($"You selected: {selectedType}"); //will display on the console.
+            string selectedClassification = Crystals[choice - 1];
+            Console.WriteLine($"You selected: {selectedClassification}"); //will display on the console.
 
             //will ask the user to describe crystal
             Console.Write("Enter your description of the crystal: ");
@@ -39,7 +39,15 @@ public class crystalsCollection
 
             //creates and returns a new crystal object using 
             //the selected type and user-provided description
-            return new Crystals();
+            Console.WriteLine($"Enter the color of the crystal:");
+            string color = Console.ReadLine();
+
+            return new Crystals(
+            {
+                Classification = selectedClassification,
+                Description = description,
+                Color = color
+            };
         }
         else //This will occur when the input is invalid
         {

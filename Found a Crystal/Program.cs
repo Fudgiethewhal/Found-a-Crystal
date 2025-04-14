@@ -9,7 +9,7 @@ namespace Found_a_Crystal;
 class Program
 {
     //Defines a private, unmodifiable list of strings representing crystal types.
-    private static readonly List<string> CrystalTypes = new List<string>()
+    public static readonly List<string> CrystalTypes = new List<string>()
     {
         "Cubic",
         "Tetragonal",

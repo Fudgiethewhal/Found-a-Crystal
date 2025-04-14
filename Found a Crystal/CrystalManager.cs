@@ -24,7 +24,7 @@ public class CrystalManager
         Console.Write("Enter location: ");
         string location = Console.ReadLine();
 
-        Console.Write("Enter crystal type: ");
+        Console.Write("Enter crystal type (if known): ");
         string crystal = Console.ReadLine();
 
         if (!collection.ContainsKey(location))
