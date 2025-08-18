@@ -1,0 +1,5 @@
+C:\Users\15756\repos\Found a Crystal\Found a Crystal\obj\Debug\net9.0\Found a Crystal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\15756\repos\Found a Crystal\Found a Crystal\obj\Debug\net9.0\Found a Crystal.AssemblyInfoInputs.cache
+C:\Users\15756\repos\Found a Crystal\Found a Crystal\obj\Debug\net9.0\Found a Crystal.AssemblyInfo.cs
+C:\Users\15756\repos\Found a Crystal\Found a Crystal\obj\Debug\net9.0\Found a Crystal.csproj.CoreCompileInputs.cache
+C:\Users\15756\repos\Found a Crystal\Found a Crystal\obj\Debug\net9.0\Found a Crystal.sourcelink.json

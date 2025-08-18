@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Found a Crystal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47cd0ec8e001b0b7746ca6f136a881fea9622ede")]
 [assembly: System.Reflection.AssemblyProductAttribute("Found a Crystal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Found a Crystal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
